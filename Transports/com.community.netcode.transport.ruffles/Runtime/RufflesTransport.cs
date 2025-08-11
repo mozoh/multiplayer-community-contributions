@@ -396,11 +396,11 @@ namespace Netcode.Transports.Ruffles
             switch (type)
             {
                 case NetworkDelivery.Reliable:
-                    return ChannelType.Reliable;
+                    return ChannelType.ReliableFragmented;
                 case NetworkDelivery.ReliableFragmentedSequenced:
                     return ChannelType.ReliableSequencedFragmented;
                 case NetworkDelivery.ReliableSequenced:
-                    return ChannelType.ReliableSequenced;
+                    return ChannelType.ReliableSequencedFragmented;
                 case NetworkDelivery.Unreliable:
                     return ChannelType.Unreliable;
                 case NetworkDelivery.UnreliableSequenced:
